@@ -11,6 +11,16 @@ Contents
 2. [writeup report (md file)](https://github.com/gtesei/SelfDrivingCars/blob/master/P1-CarND-LaneLines/writeup.md)
 
 
+Useful Links 
+---
+
+If you want to spend time to improve this, here there are useful links:
+
+* [Self-Driving Car Project Q&A | Finding Lane Lines](https://www.youtube.com/watch?v=hnXkCiM2RSg&feature=youtu.be)
+* [ROBUST AND REAL TIME DETECTION OF CURVY LANES (CURVES) HAVING DESIRED SLOPES FOR DRIVING ASSISTANCE AND AUTONOMOUS VEHICLES](http://airccj.org/CSCP/vol5/csit53211.pdf)
+* [stackoverflow](https://stackoverflow.com/questions/36598897/python-and-opencv-improving-my-lane-detection-algorithm)
+
+
 Project Setup
 ---
 
