@@ -52,13 +52,16 @@ Same approach of extrapolation.
 
 Potential shortcoming would be:
 
-* Hough transformation on Edge Detected Image does not work properly if on a lane there is an horizontal white line perpendicular to the line lane. This kind of "variations" happened in a couple of frames of the last video. 
-
-
+* Hough transformation on Edge Detected Image does not work properly if on a lane line there is an horizontal white line perpendicular to the lane line. This kind of "variations" happened in a couple of frames of the last video. 
 
 
 ## 3. Possible improvements to current pipeline
 
 Possible improvements would be: 
 
-* In order to handle cases where on a lane there is an horizontal white line perpendicular to the line lane, a possibility can be performing clustering on slope for both left points and right points, i.e. discarding points whose slope is too far from the centroids of the two main clusters.
+* In order to handle cases where on a lane line there is an horizontal white line perpendicular to the lane line, 
+
+  * we can perform clustering (e.g. k-means clustering with k=2) on slope for segments of left lane lines, right lane lines and potential noise such as white lines perpendicular to the lane line, discarding those segments whose slope are too far (outliers) from the centroids of the two main clusters (=real left lane lines and right lane lines). Of course, the concept itself of outlier needs to be better developed, as there are at least 20 possible outlier detection approaches that could be applied to this situation  
+
+
+
