@@ -52,7 +52,7 @@ Same approach of extrapolation.
 
 Potential shortcoming would be:
 
-* Hough transformation on Edge Detected Image does not work properly if on a lane line there is an horizontal white line perpendicular to the lane line. This kind of "variations" happened in a couple of frames of the last video. 
+* Hough transformation on Edge Detected Image does not work properly if on a lane line there is an horizontal white line perpendicular to the lane line. This kind of noise was found in a couple of frames of the last video. 
 
 
 ## 3. Possible improvements to current pipeline
