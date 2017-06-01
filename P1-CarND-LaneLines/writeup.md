@@ -52,7 +52,7 @@ Same approach of extrapolation.
 
 Potential shortcoming would be:
 
-* Hough transformation on Edge Detected Image does not work properly if on the a lane there is an horizontal white line perpendicular to the line lane. This kind of "variations" happened in a couple of frames of the last video. 
+* Hough transformation on Edge Detected Image does not work properly if on a lane there is an horizontal white line perpendicular to the line lane. This kind of "variations" happened in a couple of frames of the last video. 
 
 
 
@@ -61,4 +61,4 @@ Potential shortcoming would be:
 
 Possible improvements would be: 
 
-* In order to handle cases where on the a lane there is an horizontal white line perpendicular to the line lane, a possibility can be performing clustering on slope for both left points and right points, i.e. discarding points whose slope is too far from the centroids of the two main clusters.
+* In order to handle cases where on a lane there is an horizontal white line perpendicular to the line lane, a possibility can be performing clustering on slope for both left points and right points, i.e. discarding points whose slope is too far from the centroids of the two main clusters.
