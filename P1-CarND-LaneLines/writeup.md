@@ -23,13 +23,13 @@ In order to extrapolate lane lines, I will use the __polynomial of degree 1__ th
 
 For further details, see [numpy.polynomial.polynomial.polyfit](https://docs.scipy.org/doc/numpy-dev/reference/generated/numpy.polynomial.polynomial.polyfit.html) and [numpy.poly1d](https://docs.scipy.org/doc/numpy/reference/generated/numpy.poly1d.html#numpy.poly1d). 
 
-![Polynomial of degree 1 Least Squares Fit (P1-LSF)][test_images_output/P1-LSF.png]
+<img src="test_images_output/P1-LSF.png"/>
 
 #### Interpolation
 
 Same approach of extrapolation. 
 
-![Polynomial of degree 1 Least Squares Fit (P1-LSF)][test_images_output/LSF_Intra.png]
+<img src="test_images_output/LSF_Intra.png"/>
 
 
 ## 2. Identify potential shortcomings with your current pipeline
