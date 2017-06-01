@@ -31,6 +31,21 @@ Same approach of extrapolation.
 
 <img src="test_images_output/P1-LSF_Intra.png"/>
 
+#### Results 
+
+<table>  
+  <tr>
+    <td><img src="test_images_output/solidWhiteCurve.jpg" /></td>
+    <td><img src="test_images_output/solidWhiteRight.jpg"/></td>
+    <td><img src="test_images_output/solidYellowCurve.jpg"/></td>
+  </tr>
+  <tr>
+    <td><img src="test_images_output/solidYellowCurve2.jpg"/></td>
+    <td><img src="test_images_output/solidYellowLeft.jpg"/></td>
+    <td><img src="test_images_output/whiteCarLaneSwitch.jpg"/></td>
+  </tr>
+</table>  
+
 
 ## 2. Identify potential shortcomings with your current pipeline
 
