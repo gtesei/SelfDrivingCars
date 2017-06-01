@@ -62,7 +62,7 @@ Possible improvements would be:
 * In order to handle cases where on a lane line there is an horizontal white line perpendicular to the lane line, 
 
   * we can perform clustering (e.g. k-means clustering with k=2) on slope for segments of left lane lines, right lane lines and potential noise such as white lines perpendicular to the lane line, discarding those segments whose slope are too far (outliers) from the centroids of the two main clusters (=assumed to be the real left lane lines and right lane lines). Of course, the concept itself of outlier needs to be further developed, as there are several possible outlier detection approaches that could be applied to this situation. A very easy approach for detecting slope outliers can be just adopting a tolerance range (e.g. discarding all segments whose slope is not in the 2 main centriods slope +/- DELTA radiants).      
-  * we can leverage the symmetry of images, i.e. the left lane line is symmetric to the right lane line. For example, we can perform clustering just aggregating all segments with slope not so dissimilar (e.g. whose difference is <= a given threshold), computing the slope for each centriod of cluters identified and then selecting only the pair of clusters whose centroid slope is symmetric (i.e. Theta1=PI-Theta2). 
+  * we can leverage the symmetry of images, i.e. the left lane line is symmetric to the right lane line. For example, we can perform clustering just aggregating all segments with slope not so dissimilar (e.g. whose difference is <= a given threshold), computing the slope for each centriod of cluters so identified and then selecting only the pair of clusters whose centroid's slopes are symmetric each other (i.e. Theta1=PI-Theta2). 
 
 
 
