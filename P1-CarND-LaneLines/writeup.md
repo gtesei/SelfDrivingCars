@@ -31,7 +31,7 @@ Same approach of extrapolation.
 
 <img src="test_images_output/P1-LSF_Intra.png"/>
 
-#### Results 
+### Results 
 
 <table>  
   <tr>
@@ -47,16 +47,18 @@ Same approach of extrapolation.
 </table>  
 
 
-## 2. Identify potential shortcomings with your current pipeline
+## 2. Potential shortcomings with current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
+Potential shortcoming would be:
 
-Another shortcoming could be ...
+* Hough transformation on Edge Detected Image does not work properly if on the a lane there is an horizontal white line perpendicular to the line lane. This kind of "variations" happened in a couple of frames of the last video. 
 
 
-## 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
 
-Another potential improvement could be to ...
+## 3. Possible improvements to current pipeline
+
+Possible improvements would be: 
+
+* In order to handle cases where on the a lane there is an horizontal white line perpendicular to the line lane, a possibility can be performing clustering on slope for both left points and right points, i.e. discarding points whose slope is too far from the centroids of the two main clusters.
