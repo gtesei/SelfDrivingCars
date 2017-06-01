@@ -19,7 +19,7 @@ The pipeline consists of the following __main steps__ :
 
 #### Extrapolation
 
-In order to extrapolate lane lines, I will use the __polynomial of degree 1__ that is the __Least Squares Fit (P1-LSF)__ to the data. A possible __shortcoming__ could be the __linear assumption__ but we will see that such assumption works on test videos even on curved lane lines. For more extreme cases than test videos, a possible improvement could be __comparing the sum of the weighted squared errors__ of the __polynomial of degree 1__ and the __polynomial of degree 2__ (or higher) that is the __Least Squares Fit__ to the data and then choosing the best degree (= with lowest error).    
+In order to extrapolate lane lines, I will use the __polynomial of degree 1__ that is the __Least Squares Fit (P1-LSF)__ to the data (= points of segments identified by Hough transformation). A possible __shortcoming__ could be the __linear assumption__ but we will see that such assumption works on test videos even on curved lane lines. For more extreme cases than test videos, a possible improvement could be __comparing the sum of the weighted squared errors__ of the __polynomial of degree 1__ and the __polynomial of degree 2__ (or higher) that is the __Least Squares Fit__ to the data and then choosing the best degree (= with lowest error).    
 
 For further details, see [numpy.polynomial.polynomial.polyfit](https://docs.scipy.org/doc/numpy-dev/reference/generated/numpy.polynomial.polynomial.polyfit.html) and [numpy.poly1d](https://docs.scipy.org/doc/numpy/reference/generated/numpy.poly1d.html#numpy.poly1d). 
 
