@@ -4,10 +4,8 @@
 
 <img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
 
-Overview
+Contents
 ---
-
-This folder contains:
 
 1. [Jupyter Notebook with code](https://github.com/gtesei/SelfDrivingCars/blob/master/P1-CarND-LaneLines/P1.ipynb)
 2. [writeup report (md file)](https://github.com/gtesei/SelfDrivingCars/blob/master/P1-CarND-LaneLines/writeup.md)
