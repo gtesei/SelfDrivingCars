@@ -29,7 +29,7 @@ For further details, see [numpy.polynomial.polynomial.polyfit](https://docs.scip
 
 Same approach of extrapolation. 
 
-<img src="test_images_output/LSF_Intra.png"/>
+<img src="test_images_output/P1-LSF_Intra.png"/>
 
 
 ## 2. Identify potential shortcomings with your current pipeline
