@@ -281,15 +281,19 @@ Here below you can find the top 5 softmax probabilities for each image along wit
 <img src="images/p1.png" />  
 
 2  - Actual Class  17 [ No entry ] - Predicted Class: 17 [ No entry ]
+
 <img src="images/p2.png" />  
 
 3  - Actual Class  17 [ No entry ] - Predicted Class: 17 [ No entry ]
+
 <img src="images/p3.png" />  
 
 4  - Actual Class  17 [ No entry ] - Predicted Class: 17 [ No entry ]
+
 <img src="images/p4.png" />  
 
 5  - Actual Class  39 [ Keep left ] - Predicted Class: 39 [ Keep left ]
+
 <img src="images/p5.png" />  
 
 6  - Actual Class  39 [ Keep left ] - Predicted Class: 39 [ Keep left ]
