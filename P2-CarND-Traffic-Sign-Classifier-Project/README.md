@@ -8,6 +8,8 @@ Contents
 1. [Jupyter Notebook with code](https://github.com/gtesei/SelfDrivingCars/blob/master/P2-CarND-Traffic-Sign-Classifier-Project/Traffic_Sign_Classifier.ipynb) - [Jupyter Notebook with code - HTML](https://github.com/gtesei/SelfDrivingCars/blob/master/P2-CarND-Traffic-Sign-Classifier-Project/Traffic_Sign_Classifier.html)
 2. [writeup report (md file)](https://github.com/gtesei/SelfDrivingCars/blob/master/P2-CarND-Traffic-Sign-Classifier-Project/writeup.md) - [writeup report (HTML)](https://github.com/gtesei/SelfDrivingCars/blob/master/P2-CarND-Traffic-Sign-Classifier-Project/writeup.html)
 
+__NOTE:__ sometime GitHub is not able to open [Jupyter Notebook with code](https://github.com/gtesei/SelfDrivingCars/blob/master/P2-CarND-Traffic-Sign-Classifier-Project/Traffic_Sign_Classifier.ipynb) as it is a big file. If this happens to you, please use [Jupyter Notebook with code - HTML version](https://github.com/gtesei/SelfDrivingCars/blob/master/P2-CarND-Traffic-Sign-Classifier-Project/Traffic_Sign_Classifier.html) instead.    
+
 ### Dependencies
 This lab requires:
 
