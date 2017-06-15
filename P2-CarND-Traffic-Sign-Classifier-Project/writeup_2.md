@@ -274,8 +274,11 @@ The code for making predictions on my final model is located in the cell N. 22 o
 
 Here below you can find the top 5 softmax probabilities for each image along with each probability and visualizations are provided such as bar charts
 
-
+<script src="https://www.w3schools.com/lib/w3.js"></script>
 <div w3-include-html="content1.html"></div>
+<script>
+w3.includeHTML();
+</script>
 
 ## (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
