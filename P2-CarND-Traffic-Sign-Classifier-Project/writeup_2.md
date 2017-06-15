@@ -317,7 +317,9 @@ Here below you can find the top 5 softmax probabilities for each image along wit
 12  - Actual Class  0 [ Speed limit (20km/h) ] - Predicted Class: 5 [ Speed limit (80km/h) ]
 <img src="images/p12.png" />  
 
+
 13  - Actual Class  17 [ No entry ] - Predicted Class: 17 [ No entry ]
+
 <img src="images/p13.png" />  
 
 14  - Actual Class  38 [ Keep right ] - Predicted Class: 38 [ Keep right ]
