@@ -19,8 +19,9 @@ The goals / steps of this project are the following:
 Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation
 
 CRITERIA | MEETS SPECIFICATIONS | HOW I ADDRESSED THE POINT | 
-
 --- | --- | --- | --- 
+ss | ss | ss |
+
 
 Submission Files | The project submission includes all required files. | Traffic_Sign_Classifier.ipynb notebook file is part of this repository. An HTML export of the project notebook with the name report.html is part of this repository. Any additional datasets or images used for the project that are not from the German Traffic Sign Dataset is part of this repository. Writeup report as a markdown file is part of this repository |  
 Dataset Summary | The submission includes a basic summary of the data set. |Please see section Data Set Summary & Exploration, and sub-sections 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually, 2. Include an exploratory visualization of the dataset, 2.1 Frequency Distribution, 2.2 Checking for unbalanced classes, 2.3 Plot Signal Images |  
