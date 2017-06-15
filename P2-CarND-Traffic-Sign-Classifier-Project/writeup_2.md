@@ -272,13 +272,128 @@ Here are the results of the prediction with related comments:
 
 The code for making predictions on my final model is located in the cell N. 22 of the Ipython notebook.
 
-Here below you can find the top 5 softmax probabilities for each image along with each probability and visualizations are provided such as bar charts
+Here below you can find the top 5 softmax probabilities for each image along with each probability and visualizations are provided such as bar charts. For the exact values of predicted probabilities, please see cell N. 24 of the Ipython notebook.
 
 0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+1  - Actual Class  39 [ Keep left ] - Predicted Class: 39 [ Keep left ]
 <img src="images/p1.png" />  
 
+2  - Actual Class  17 [ No entry ] - Predicted Class: 17 [ No entry ]
+<img src="images/p2.png" />  
+
+3  - Actual Class  17 [ No entry ] - Predicted Class: 17 [ No entry ]
+<img src="images/p3.png" />  
+
+4  - Actual Class  17 [ No entry ] - Predicted Class: 17 [ No entry ]
+<img src="images/p4.png" />  
+
+5  - Actual Class  39 [ Keep left ] - Predicted Class: 39 [ Keep left ]
+<img src="images/p5.png" />  
+
+6  - Actual Class  39 [ Keep left ] - Predicted Class: 39 [ Keep left ]
+<img src="images/p6.png" />  
+
+7  - Actual Class  40 [ Roundabout mandatory ] - Predicted Class: 40 [ Roundabout mandatory ]
+<img src="images/p7.png" />  
+
+8  - Actual Class  40 [ Roundabout mandatory ] - Predicted Class: 40 [ Roundabout mandatory ]
+<img src="images/p8.png" />  
+
+9  - Actual Class  34 [ Turn left ahead ] - Predicted Class: 34 [ Turn left ahead ]
+<img src="images/p9.png" />  
+
+10  - Actual Class  28 [ Children crossing ] - Predicted Class: 28 [ Children crossing ]
+<img src="images/p10.png" />  
+
+11  - Actual Class  39 [ Keep left ] - Predicted Class: 39 [ Keep left ]
+<img src="images/p11.png" />  
+
+12  - Actual Class  0 [ Speed limit (20km/h) ] - Predicted Class: 5 [ Speed limit (80km/h) ]
+<img src="images/p12.png" />  
+
 0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p1.png" />  
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
+0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
+<img src="images/p0.png" />  
+
 
 
 ## (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
