@@ -317,87 +317,80 @@ Here below you can find the top 5 softmax probabilities for each image along wit
 12  - Actual Class  0 [ Speed limit (20km/h) ] - Predicted Class: 5 [ Speed limit (80km/h) ]
 <img src="images/p12.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+13  - Actual Class  17 [ No entry ] - Predicted Class: 17 [ No entry ]
+<img src="images/p13.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+14  - Actual Class  38 [ Keep right ] - Predicted Class: 38 [ Keep right ]
+<img src="images/p14.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+15  - Actual Class  13 [ Yield ] - Predicted Class: 13 [ Yield ]
+<img src="images/p15.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+16  - Actual Class  40 [ Roundabout mandatory ] - Predicted Class: 40 [ Roundabout mandatory ]
+<img src="images/p16.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+17  - Actual Class  13 [ Yield ] - Predicted Class: 13 [ Yield ]
+<img src="images/p17.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+18  - Actual Class  38 [ Keep right ] - Predicted Class: 38 [ Keep right ]
+<img src="images/p18.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+19  - Actual Class  38 [ Keep right ] - Predicted Class: 38 [ Keep right ]
+<img src="images/p19.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+20  - Actual Class  11 [ Right-of-way at the next intersection ] - Predicted Class: 11 [ Right-of-way at the next intersection ]
+<img src="images/p20.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+21  - Actual Class  0 [ Speed limit (20km/h) ] - Predicted Class: 5 [ Speed limit (80km/h) ]
+<img src="images/p21.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+22  - Actual Class  28 [ Children crossing ] - Predicted Class: 28 [ Children crossing ]
+<img src="images/p22.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+23  - Actual Class  0 [ Speed limit (20km/h) ] - Predicted Class: 7 [ Speed limit (100km/h) ]
+<img src="images/p23.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+24  - Actual Class  99 [ UNKNOWN ] - Predicted Class: 20 [ Dangerous curve to the right ]
+<img src="images/p24.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+25  - Actual Class  99 [ UNKNOWN ] - Predicted Class: 13 [ Yield ]
+<img src="images/p25.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+26  - Actual Class  99 [ UNKNOWN ] - Predicted Class: 7 [ Speed limit (100km/h) ]
+<img src="images/p26.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+27  - Actual Class  32 [ End of all speed and passing limits ] - Predicted Class: 1 [ Speed limit (30km/h) ]
+<img src="images/p27.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+28  - Actual Class  40 [ Roundabout mandatory ] - Predicted Class: 40 [ Roundabout mandatory ]
+<img src="images/p28.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+29  - Actual Class  28 [ Children crossing ] - Predicted Class: 28 [ Children crossing ]
+<img src="images/p29.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+30  - Actual Class  40 [ Roundabout mandatory ] - Predicted Class: 40 [ Roundabout mandatory ]
+<img src="images/p30.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+31  - Actual Class  40 [ Roundabout mandatory ] - Predicted Class: 40 [ Roundabout mandatory ]
+<img src="images/p31.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+32  - Actual Class  28 [ Children crossing ] - Predicted Class: 28 [ Children crossing ]
+<img src="images/p32.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+33  - Actual Class  24 [ Road narrows on the right ] - Predicted Class: 24 [ Road narrows on the right ]
+<img src="images/p33.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+34  - Actual Class  0 [ Speed limit (20km/h) ] - Predicted Class: 0 [ Speed limit (20km/h) ]
+<img src="images/p34.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+35  - Actual Class  0 [ Speed limit (20km/h) ] - Predicted Class: 0 [ Speed limit (20km/h) ]
+<img src="images/p35.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
+36  - Actual Class  0 [ Speed limit (20km/h) ] - Predicted Class: 5 [ Speed limit (80km/h) ]
+<img src="images/p36.png" />  
 
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
-
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
-
-0  - Actual Class  21 [ Double curve ] - Predicted Class: 35 [ Ahead only ] 
-<img src="images/p0.png" />  
-
+37  - Actual Class  0 [ Speed limit (20km/h) ] - Predicted Class: 3 [ Speed limit (60km/h) ]
+<img src="images/p37.png" />  
 
 
 ## (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
