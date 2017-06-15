@@ -399,9 +399,64 @@ Here below you can find the top 5 softmax probabilities for each image along wit
 ### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
 The feature map activations clearly show the outline of the traffic signs, i.e. the CNN finds useful information.
-Here below you can find the visual output of trained network's feature maps for a sample of 10 new images imported from the web.  
+Here below you can find the visual output of trained network's feature maps for a sample of 4 new images imported from the web. For more visual outputs of trained network's feature maps, please see the cell N. 28 of the Ipython notebook.
+
+
+__0 Original Image__
+
+<img src="images/fm00.png" />  
+
+Features right after conv layer 1:
+
+<img src="images/fm01.png" />  
+
+Features right after conv layer 2:
+
+<img src="images/fm02.png" />  
+
+
+
+
+__1 Original Image__
+
+<img src="images/fm10.png" />  
+
+Features right after conv layer 1:
+
+<img src="images/fm11.png" />  
+
+Features right after conv layer 2:
+
+<img src="images/fm12.png" />  
 
 
 
 
 
+__2 Original Image__
+
+<img src="images/fm20.png" />  
+
+Features right after conv layer 1:
+
+<img src="images/fm21.png" />  
+
+Features right after conv layer 2:
+
+<img src="images/fm22.png" />  
+
+
+
+
+
+__3 Original Image__
+
+<img src="images/fm30.png" />  
+
+Features right after conv layer 1:
+
+<img src="images/fm31.png" />  
+
+Features right after conv layer 2:
+
+<img src="images/fm32.png" />  
