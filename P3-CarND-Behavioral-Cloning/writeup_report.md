@@ -108,7 +108,7 @@ The model contains a dropout layer in order to reduce overfitting (model.py, lin
 
 
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 
 The model used an adam optimizer (model.py line 138), that is an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. For further details, see [Diederik P. Kingma et al, _ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION_, arXiv:1412.6980v8 [cs.LG] 23 Jul 2015](https://arxiv.org/pdf/1412.6980v8.pdf). 
 
