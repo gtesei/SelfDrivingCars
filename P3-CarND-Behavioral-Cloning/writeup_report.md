@@ -52,16 +52,18 @@ python drive.py model.h5
 
 The __model.py__ file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works. Also, the script can be parametrized as here explained:  
 
-* __data directory__: '-d', default='data'
-* __test size fraction__: '-t', default=0.2
-* __drop out probability__: '-k', default=0.5
-* __number of epochs__: '-n', default=3
-* __batch size__: '-b', default=32
-* __learning rate__: '-l', default=1.0e-4
-* __visualize loss__: '-v', default=0  (if enabled, it plots the training and validation loss for each epoch) 
-* __output model__: '-o', default='model.h5'
-* __flip images__: '-d', default=1 (if enabled, it augment the images by flipping images and taking the opposite sign of the steering measurement) 
-* __rand brightness__: '-d', default=1 (if enabled, it augment the images by augment brightness randomly)
+OPTION | SELECTOR | DEFAULT | DESCRIPTION | 
+--- | --- | --- | --- |
+__data directory__ | '-d' | default='data' | |
+__test size fraction__ |'-t' | default=0.2 | |
+__drop out probability__ | '-k' | default=0.5 | |
+__number of epochs__ | '-n' | default=3 | |
+__batch size__ | '-b' | default=32 | |
+__learning rate__ | '-l'| default=1.0e-4 | |
+__visualize loss__ | '-v' | default=0  | if enabled, it plots the training and validation loss for each epoch |
+__output model__ | '-o'| default='model.h5' | |
+__flip images__ | '-d'| default=1 | if enabled, it augment the images by flipping images and taking the opposite sign of the steering measurement | 
+__rand brightness__ | '-d' | default=1 | if enabled, it augment the images by augment brightness randomly |
 
 ---
 
