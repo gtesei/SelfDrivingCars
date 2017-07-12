@@ -37,9 +37,11 @@ Is the car able to navigate correctly on test data? | No tire may leave the driv
 #### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 Project includes the following files:
+
 * __model.py__ containing the script to create and train the model
 * __drive.py__ for driving the car in autonomous mode
 * __model.h5__ containing a trained convolution neural network 
+* __video.mp4__ containing the video showing that the vehicle is able to drive autonomously around the track without leaving the road (see on [YouTube](https://youtu.be/lzqxdYs-e4Y))
 * __writeup_report.md__ summarizing the results
 
 #### 2. Submission includes functional code
@@ -86,7 +88,7 @@ The network architecture consists of 9 layers, including a normalization layer, 
 
 #### 2. Attempts to reduce overfitting in the model
 
-The model contains a dropout layer in order to reduce overfitting (model.py, line 106) and it was trained and validated on different data sets to ensure that the model was not overfitting (code line 124-132). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model contains a dropout layer in order to reduce overfitting (model.py, line 106) and it was trained and validated on different data sets to ensure that the model was not overfitting (code line 124-132). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track. As below shown, the __best drop out probability__ is __0.5__. 
 
 
 ##### **Drop out probability set to 0**
@@ -107,45 +109,74 @@ The model contains a dropout layer in order to reduce overfitting (model.py, lin
 
 ####3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 25).
+The model used an adam optimizer (model.py line 138), that is an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. For further details, see [Diederik P. Kingma et al, _ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION_, arXiv:1412.6980v8 [cs.LG] 23 Jul 2015](https://arxiv.org/pdf/1412.6980v8.pdf). 
 
-####4. Appropriate training data
+#### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road ... 
+Training data was chosen to keep the vehicle driving on the road. I used a combination of brakeless driving, driving using brake and driving counter-clockwise to reduce left turn bias. 
 
 For details about how I created the training data, see the next section. 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Solution Design Approach
+#### 1. Solution Design Approach
 
-The overall strategy for deriving a model architecture was to ...
-
-My first step was to use a convolution neural network model similar to the ... I thought this model might be appropriate because ...
-
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
-
-To combat the overfitting, I modified the model so that ...
-
-Then I ... 
-
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track... to improve the driving behavior in these cases, I ....
-
-At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
+* My first step was to use [sample training data](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip) to train a simple linear regressor. As the track and the brightness were different I applied the grayscale transformation and gaussian blur ( kernel_size=5) to images in order to reuse these data on the track of simulator; related results were not bad and I interpreted this as a sign that a better regressor could have been sucessfull; 
+* Hence, I used the data described above to feed a Convolutional Neural Network and the car in autonomous mode drove in satisfactory way except for the big curve after the bridge that the car was not able to do properly; 
+* In order to fix the problem I augmented data by using several techniques such as flipping images and taking the opposite sign of the steering measurement but without fixing the problem 
+* Hence, I decided to change approach: using the training data of a different track of the simulator was probably too stretch, so I collected 3 train sets by using the simulator in training mode:
+    * the first train set was collected by driving the car brakeless 
+    * the second train set was collected by driving the car using brake 
+    * the third train set was collected by driving counter-clockwise (using brake)
+* Also, I used the convolution neural network described in [Mariusz Bojarski et al., _End to End Learning for Self-Driving Cars_, arXiv:1604.07316v1 [cs.CV] 25 Apr 2016](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) adding a dropout layer to reduce overfitting     
+* In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set (by default 20%)
+* To combat the overfitting, I tuned the drop out probability as described above   
+* The final step was to run the simulator to see how well the car was driving around track one and the vehicle was able to drive autonomously around the track without leaving the road
 
 ####2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture was inspired to [Mariusz Bojarski et al., _End to End Learning for Self-Driving Cars_, arXiv:1604.07316v1 [cs.CV] 25 Apr 2016](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) and it consisted of a convolution neural network with 9 layers, including a normalization layer, 5 convolutional layers and 3 fully connected layers:
 
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
+* The input image is properly cropped and passed to the network 
+* The first layer of the network performs image normalization
+* The convolutional layers are designed to perform feature extraction and were chosen empirically through a series of experiments that varied layer configurations. We use strided convolutions in the first three convolutional layers with a 2x2 stride and a 5x5 kernel and a non-strided convolution with a 3x3 kernel size in the last two convolutional layers
+* We follow the five convolutional layers with a dropout layer for reducing overfitting  
+* We follow the dropout layer with three fully connected layers leading to an output control value which is the inverse turning radius 
 
-![alt text][image1]
+Here is a detailed description of the architecture. 
+
+| Layer         		|     Description	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Input         		| 66x200x3 RGB resized and cropped images    							| 
+| Image normalization     	|  	|
+| Convolution 5x5     	| filter: 24, strides: 2x2 	|
+| ELU					|										|
+| Convolution 5x5     	| filter: 36, strides: 2x2 	|
+| ELU					|										|
+| Convolution 5x5     	| filter: 48, strides: 2x2	|
+| ELU					|										|
+| Convolution 5x5     	| filter: 64, strides: 1x1 	|
+| ELU					|										|
+| Convolution 5x5     	| filter: 64, strides: 1x1 	|
+| ELU					|										|
+| DROPOUT					|				only for training, keep probabily = 0.5							|
+| Fully connected		| 100 neurons        									|
+| Fully connected		| 50 neurons        									|
+| Fully connected		| 10 neurons        									|
+| Fully connected		| 1 neurons        									|
+
+
+Here is a visualization of the original architecture from [Mariusz Bojarski et al., _End to End Learning for Self-Driving Cars_, arXiv:1604.07316v1 [cs.CV] 25 Apr 2016](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) that is a special case of the above one (drop out probability set to 0). 
+
+
+<img src="img/CNN_ARCH.JPG" /> 
+
 
 ####3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
-![alt text][image2]
+
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
 
