@@ -110,7 +110,7 @@ The model contains a dropout layer in order to reduce overfitting (model.py, lin
 
 #### 3. Model parameter tuning
 
-The model used an adam optimizer (model.py line 138), that is an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. For further details, see [Diederik P. Kingma et al, _ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION_, arXiv:1412.6980v8 [cs.LG] 23 Jul 2015](https://arxiv.org/pdf/1412.6980v8.pdf). 
+The model used an __Adam optimizer__  (model.py line 138), that is an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. For further details, see [Diederik P. Kingma et al, _ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION_, arXiv:1412.6980v8 [cs.LG] 23 Jul 2015](https://arxiv.org/pdf/1412.6980v8.pdf). 
 
 #### 4. Appropriate training data
 
@@ -127,7 +127,7 @@ For details about how I created the training data, see the next section.
 * In order to fix the problem I augmented data by using several techniques such as flipping images and taking the opposite sign of the steering measurement but without fixing the problem 
 * Hence, I decided to change approach: using the training data of a different track of the simulator was probably too stretch, so I collected 3 train sets by using the simulator in training mode:
     * the first train set was collected by driving the car on track using center lane  
-    * the second train set was collected by driving the car on track one using center lane  
+    * the second train set was collected recovering from the left side and right sides of the road back to center
     * the third train set was collected by driving on track one using center lane counter-clockwise 
 * Also, I used the convolution neural network described in [Mariusz Bojarski et al., _End to End Learning for Self-Driving Cars_, arXiv:1604.07316v1 [cs.CV] 25 Apr 2016](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) adding a dropout layer to reduce overfitting     
 * In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set (by default 20%)
@@ -175,55 +175,48 @@ Here is a visualization of the original architecture from [Mariusz Bojarski et a
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I recorded three laps: 
+To capture good driving behavior, I recorded __three laps__: 
 
-1. I first recorded one lap on track one using center lane driving. 
-2. Then I recorded one lap the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn how to recover from not central positions. 
-3. Finally I recorded one lap driving counter-clockwise to reduce left turn bias 
+1. I first recorded one lap on track one using __center lane driving__. 
+2. Then I recorded one lap the vehicle __recovering from the left side and right sides of the road back to center__ so that the vehicle would learn how to recover from not central positions. 
+3. Finally I recorded one lap __driving counter-clockwise__ to reduce left turn bias.  
 
 Here are some sample (resized and cropped) images. 
 
-__1 On track one using center lane driving__
+__On track one using center lane driving__
 
 <img src="img/lap_1_1.png" />  
 <img src="img/lap_1_2.png" />  
 <img src="img/lap_1_3.png" />  
 
 
-__2 Recovering from the left side and right sides of the road back to center__
+__Recovering from the left side and right sides of the road back to center__
 
 <img src="img/lap_2_1.png" />  
 <img src="img/lap_2_2.png" />  
 <img src="img/lap_2_3.png" />  
 
 
-__3 Driving counter-clockwise__
+__Driving counter-clockwise__
 
 <img src="img/lap_3_1.png" />  
 <img src="img/lap_3_2.png" />  
 <img src="img/lap_3_3.png" />  
 
 
+__To augment the data__, I designed the script ```model.py``` so that it would be possible to  
+
+1. __use multiple cameras__ adjusting the steering measurements for the side camera images (model.py, lines 46-58), 
+2. __flip images__ and taking the opposite sign of the steering measurement (model.py, lines 60-62, __enabled, by default__) 
+3. __modify brightness randomly__ (model.py, lines 64-68, __enabled, by default__) 
 
 
- .... These images show what a recovery looks like starting from ... :
+After the collection process, using __default settings__, I had __74,052 data points__. I then preprocessed this data by just resizing and cropping to have 66x200 RGB images. 
 
-![alt text][image3]
-![alt text][image4]
-![alt text][image5]
+I finally randomly shuffled the data set and put 20% of the data into a validation set. 
 
-Then I repeated this process on track two in order to get more data points.
-
-To augment the data sat, I also flipped images and angles thinking that this would ... For example, here is an image that has then been flipped:
-
-![alt text][image6]
-![alt text][image7]
-
-Etc ....
-
-After the collection process, I had X number of data points. I then preprocessed this data by ...
-
-
-I finally randomly shuffled the data set and put Y% of the data into a validation set. 
-
-I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
+I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The __best drop out probability__ is __0.5__ as shown in section __Attempts to reduce overfitting in the model__. Assuming such drop out probability, the ideal number of epochs was 3 as evidenced by the plot in section __Attempts to reduce overfitting in the model__ and here reported for convenience. 
+ 
+ <img src="img/loss_dropout_05.png" /> 
+ 
+I used an __Adam optimizer__ (model.py line 138), that is an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. For further details, see [Diederik P. Kingma et al, _ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION_, arXiv:1412.6980v8 [cs.LG] 23 Jul 2015](https://arxiv.org/pdf/1412.6980v8.pdf). 
