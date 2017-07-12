@@ -8,7 +8,6 @@ from keras.backend import tf as ktf
 from keras.optimizers import Adam
 from scipy.misc import imresize
 from keras.callbacks import ModelCheckpoint
-import csv
 import matplotlib.image as mpimg
 import cv2
 import matplotlib.pyplot as plt
