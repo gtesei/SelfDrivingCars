@@ -42,10 +42,7 @@ Project includes the following files:
 * __drive.py__ for driving the car in autonomous mode
 * __model.h5__ containing a trained convolution neural network 
 * __writeup_report.md__ summarizing the results
-* __video.mp4__ containing the video showing that the vehicle is able to drive autonomously around the track without leaving the road
-
-<div style="position:relative;height:0;padding-bottom:56.21%"><iframe src="https://www.youtube.com/embed/lzqxdYs-e4Y?ecver=2" style="position:absolute;width:100%;height:100%;left:0" width="641" height="360" frameborder="0" allowfullscreen></iframe></div>
-
+* __video.mp4__ containing the video showing that the vehicle is able to drive autonomously around the track without leaving the road (see on [YouTube](https://youtu.be/lzqxdYs-e4Y))
 
 
 #### 2. Submission includes functional code
