@@ -114,7 +114,7 @@ The model used an adam optimizer (model.py line 138), that is an algorithm for f
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. I used a combination of brakeless driving, driving using brake and driving counter-clockwise to reduce left turn bias. 
+Training data was chosen to keep the vehicle driving on the road. I used a combination of driving on track using center and driving counter-clockwise to reduce left turn bias. 
 
 For details about how I created the training data, see the next section. 
 
@@ -126,9 +126,9 @@ For details about how I created the training data, see the next section.
 * Hence, I used the data described above to feed a Convolutional Neural Network and the car in autonomous mode drove in satisfactory way except for the big curve after the bridge that the car was not able to do properly; 
 * In order to fix the problem I augmented data by using several techniques such as flipping images and taking the opposite sign of the steering measurement but without fixing the problem 
 * Hence, I decided to change approach: using the training data of a different track of the simulator was probably too stretch, so I collected 3 train sets by using the simulator in training mode:
-    * the first train set was collected by driving the car brakeless 
-    * the second train set was collected by driving the car using brake 
-    * the third train set was collected by driving counter-clockwise (using brake)
+    * the first train set was collected by driving the car on track using center lane  
+    * the second train set was collected by driving the car on track one using center lane  
+    * the third train set was collected by driving on track one using center lane counter-clockwise 
 * Also, I used the convolution neural network described in [Mariusz Bojarski et al., _End to End Learning for Self-Driving Cars_, arXiv:1604.07316v1 [cs.CV] 25 Apr 2016](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) adding a dropout layer to reduce overfitting     
 * In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set (by default 20%)
 * To combat the overfitting, I tuned the drop out probability as described above   
@@ -175,11 +175,38 @@ Here is a visualization of the original architecture from [Mariusz Bojarski et a
 
 #### 3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
+To capture good driving behavior, I recorded three laps: 
+
+1. I first recorded one lap on track one using center lane driving. 
+2. Then I recorded one lap the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn how to recover from not central positions. 
+3. Finally I recorded one lap driving counter-clockwise to reduce left turn bias 
+
+Here are some sample (resized and cropped) images. 
+
+__1 On track one using center lane driving__
+
+<img src="img/lap_1_1.png" />  
+<img src="img/lap_1_2.png" />  
+<img src="img/lap_1_3.png" />  
+
+
+__2 Recovering from the left side and right sides of the road back to center__
+
+<img src="img/lap_2_1.png" />  
+<img src="img/lap_2_2.png" />  
+<img src="img/lap_2_3.png" />  
+
+
+__3 Driving counter-clockwise__
+
+<img src="img/lap_3_1.png" />  
+<img src="img/lap_3_2.png" />  
+<img src="img/lap_3_3.png" />  
 
 
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
+
+ .... These images show what a recovery looks like starting from ... :
 
 ![alt text][image3]
 ![alt text][image4]

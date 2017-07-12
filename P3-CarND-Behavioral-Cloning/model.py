@@ -120,9 +120,9 @@ def train_and_save_model(args):
     Train and save model
     """
 
-    # brakeless
+    # center lane driving
     X_train1, y_train1 = load_images(args,csv_file=args.data_dir+'/data_2/driving_log.csv', path=args.data_dir+'/data_2/IMG/')
-    # using brake
+    #  recovering from the left side and right sides of the road back to center
     X_train2, y_train2 = load_images(args,csv_file=args.data_dir+'/data_3/driving_log.csv', path=args.data_dir+'/data_3/IMG/')
     # driving counter-clockwise
     X_train3, y_train3 = load_images(args,csv_file=args.data_dir+'/data_4/driving_log.csv', path=args.data_dir+'/data_4/IMG/')
