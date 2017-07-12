@@ -172,7 +172,7 @@ Here is a visualization of the original architecture from [Mariusz Bojarski et a
 <img src="img/CNN_ARCH.JPG" /> 
 
 
-####3. Creation of the Training Set & Training Process
+#### 3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
