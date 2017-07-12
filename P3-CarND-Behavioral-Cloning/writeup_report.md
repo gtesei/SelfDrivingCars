@@ -133,7 +133,7 @@ For details about how I created the training data, see the next section.
 * To combat the overfitting, I tuned the drop out probability as described above   
 * The final step was to run the simulator to see how well the car was driving around track one and the vehicle was able to drive autonomously around the track without leaving the road
 
-####2. Final Model Architecture
+#### 2. Final Model Architecture
 
 The final model architecture was inspired to [Mariusz Bojarski et al., _End to End Learning for Self-Driving Cars_, arXiv:1604.07316v1 [cs.CV] 25 Apr 2016](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) and it consisted of a convolution neural network with 9 layers, including a normalization layer, 5 convolutional layers and 3 fully connected layers:
 
