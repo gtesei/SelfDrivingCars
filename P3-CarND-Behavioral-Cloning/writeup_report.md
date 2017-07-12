@@ -71,15 +71,39 @@ __rand brightness__ | '-d' | default=1 | if enabled, it augment the images by au
 
 #### 1. An appropriate model architecture has been employed
 
-My model consists of a convolution neural network with 3x3 filter sizes and depths between 32 and 128 (model.py lines 18-24) 
+The model (model.py, lines 76-114) is ispired to the convolution neural network described in [Mariusz Bojarski et al., _End to End Learning for Self-Driving Cars_, arXiv:1604.07316v1 [cs.CV] 25 Apr 2016](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) 
 
-The model includes RELU layers to introduce nonlinearity (code line 20), and the data is normalized in the model using a Keras lambda layer (code line 18). 
+
+The network architecture consists of 9 layers, including a normalization layer, 5 convolutional layers and 3 fully connected layers:
+
+* The input image is properly cropped and passed to the network 
+* The first layer of the network performs image normalization
+* The convolutional layers are designed to perform feature extraction and were chosen empirically through a series of experiments that varied layer configurations. We use strided convolutions in the first three convolutional layers with a 2x2 stride and a 5x5 kernel and a non-strided convolution with a 3x3 kernel size in the last two convolutional layers
+* We follow the five convolutional layers with a dropout layer for reducing overfitting  
+* We follow the dropout layer with three fully connected layers leading to an output control value which is the inverse turning radius 
+
+
 
 #### 2. Attempts to reduce overfitting in the model
 
-The model contains dropout layers in order to reduce overfitting (model.py lines 21). 
+The model contains a dropout layer in order to reduce overfitting (model.py, line 106) and it was trained and validated on different data sets to ensure that the model was not overfitting (code line 124-132). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 10-16). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+
+##### **Drop out probability set to 0**
+
+<img src="img/loss_dropout_0.png" /> 
+
+
+##### **Drop out probability set to 0.5**
+
+<img src="img/loss_dropout_05.png" /> 
+
+
+##### **Drop out probability set to 0.75**
+
+<img src="img/loss_dropout_075.png" /> 
+
+
 
 ####3. Model parameter tuning
 
