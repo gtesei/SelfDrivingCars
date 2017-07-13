@@ -246,7 +246,23 @@ I used this training data for training the model. The validation set helped dete
  
 I used an __Adam optimizer__ (model.py line 138), that is an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. For further details, see [Diederik P. Kingma et al, _ADAM: A METHOD FOR STOCHASTIC OPTIMIZATION_, arXiv:1412.6980v8 [cs.LG] 23 Jul 2015](https://arxiv.org/pdf/1412.6980v8.pdf). 
 
+## Observations 
+
 
 ## Dependencies
 
 * [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit)
+
+## Further Resources 
+
+* To avoid the zig-zag oscillating motion of the car, you may apply the correction to the steering values only when the steering angle value is greater than a certain value (0.15 seems to be a reasonable angle). This should allow for a much smoother drive allowing the vehicle to drift a tolerable amount without the rapid frame-by-frame movement of steering.
+* You may also use Keras to graphically visualize your model architecture - https://keras.io/visualization/ 
+* Note that Keras also provides a number of callback functions that you may use to decide upon the training parameters. Fr example, you may use the ModelCheckpoint callback to save the model after every epoch. Or you may use the EarlyStopping callback to stop training when a monitored quantity has stopped improving. You may refer to https://keras.io/callbacks/
+
+* https://www.youtube.com/watch?v=rpxZ87YFg0M
+* http://selfdrivingcars.mit.edu/
+* http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf
+* http://jacobgil.github.io/deeplearning/vehicle-steering-angle-visualizations
+* http://medium.com/udacity/teaching-a-machine-to-steer-a-car-d73217f2492c
+* http://chatbotslife.com/using-augmentation-to-mimic-human-driving-496b569760a9
+* Michael A. Nielsen, "Neural Networks and Deep Learning", Determination Press, 2015
