@@ -248,16 +248,15 @@ I used an __Adam optimizer__ (model.py line 138), that is an algorithm for first
 
 ## Observations 
 
+* To avoid the zig-zag oscillating motion of the car, you may apply the correction to the steering values only when the steering angle value is greater than a certain value (0.15 seems to be a reasonable angle). This should allow for a much smoother drive allowing the vehicle to drift a tolerable amount without the rapid frame-by-frame movement of steering.
+* You may also use Keras to graphically visualize your model architecture - https://keras.io/visualization/ 
+* Note that Keras also provides a number of callback functions that you may use to decide upon the training parameters. Fr example, you may use the ModelCheckpoint callback to save the model after every epoch. Or you may use the EarlyStopping callback to stop training when a monitored quantity has stopped improving. You may refer to https://keras.io/callbacks/
 
 ## Dependencies
 
 * [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit)
 
 ## Further Resources 
-
-* To avoid the zig-zag oscillating motion of the car, you may apply the correction to the steering values only when the steering angle value is greater than a certain value (0.15 seems to be a reasonable angle). This should allow for a much smoother drive allowing the vehicle to drift a tolerable amount without the rapid frame-by-frame movement of steering.
-* You may also use Keras to graphically visualize your model architecture - https://keras.io/visualization/ 
-* Note that Keras also provides a number of callback functions that you may use to decide upon the training parameters. Fr example, you may use the ModelCheckpoint callback to save the model after every epoch. Or you may use the EarlyStopping callback to stop training when a monitored quantity has stopped improving. You may refer to https://keras.io/callbacks/
 
 * https://www.youtube.com/watch?v=rpxZ87YFg0M
 * http://selfdrivingcars.mit.edu/
