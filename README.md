@@ -8,6 +8,7 @@
 1. [(P1)  Finding Lane Lines on the Road](https://github.com/gtesei/SelfDrivingCars/tree/master/P1-CarND-LaneLines)
 2. [(P2)  Build a Traffic Sign Recognition Classifier](https://github.com/gtesei/SelfDrivingCars/tree/master/P2-CarND-Traffic-Sign-Classifier-Project)
 3. [(P3)  Behavioral Cloning](https://github.com/gtesei/SelfDrivingCars/tree/master/P3-CarND-Behavioral-Cloning)
+4. [(P4)  Advanced Lane Finding](https://github.com/gtesei/SelfDrivingCars/tree/master/P4-CarND-Advanced-Lane-Lines)
 
 
 
