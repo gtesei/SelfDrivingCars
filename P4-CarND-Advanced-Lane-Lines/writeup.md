@@ -45,11 +45,9 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
-__Original Image__ 
-<img src="test_images/test2.jpg"/>  
-
-__Undistorted Image__ 
-<img src="output_images/test2_undistort.png" /> 
+Original Image | Undistorted Image |
+--- | --- | 
+<img src="test_images/test2.jpg"/>   | <img src="output_images/test2_undistort.png" />  | 
 
 Other examples can be found here. 
 
@@ -62,18 +60,16 @@ Original Image | Undistorted Image |
 [test5](test_images/test5.jpg) | [test1 undistorted](output_images/test5_undistort.png) | 
 [test6](test_images/test6.jpg) | [test1 undistorted](output_images/test6_undistort.png) | 
 
-Related code can be found in cell #5-#6 of Advanced_Lane_Finding_Notebook.ipynb. 
+Related code can be found in cells #5 and #6 of Advanced_Lane_Finding_Notebook.ipynb. 
 
 
 ### Pipeline (single images)
 
 #### 1. Provide an example of a distortion-corrected image.
 
-__Original Image__ 
-<img src="test_images/test2.jpg"/>  
-
-__Undistorted Image__ 
-<img src="output_images/test2_undistort.png" /> 
+Original Image | Undistorted Image |
+--- | --- | 
+<img src="test_images/test2.jpg"/>   | <img src="output_images/test2_undistort.png" />  | 
 
 Other examples can be found here. 
 
@@ -86,13 +82,33 @@ Original Image | Undistorted Image |
 [test5](test_images/test5.jpg) | [test1 undistorted](output_images/test5_undistort.png) | 
 [test6](test_images/test6.jpg) | [test1 undistorted](output_images/test6_undistort.png) | 
 
-Related code can be found in cell #5-#6 of Advanced_Lane_Finding_Notebook.ipynb. 
+Related code can be found in cells #5 and #6 of Advanced_Lane_Finding_Notebook.ipynb. 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
+I used a combination of color and gradient thresholds to generate a binary image.  Related code can be found in cells from #7 to #14 of Advanced_Lane_Finding_Notebook.ipynb. 
 
-![alt text][image3]
+
+I combined two pipelines:
+
+1. converted to HSV color space and extratced S and L channels, took the derivative in x and its absolute to accentuate lines away from horizontal, thresholded x gradient, thresholded color channel and finally combined the binary thresholds
+2. applied Sobel transform and extracted gradient in x an y direction, thresholded magnitude and direction and finally combined the binary thresholds
+
+
+
+Here's examples of my output for this step.  
+
+
+
+Original Image | Thresholded Binary Image |
+--- | --- | 
+<img src="test_images/test1.jpg"/> | <img src="output_images/test1_thresholding.png"/>  | 
+<img src="test_images/test2.jpg"/> | <img src="output_images/test2_thresholding.png"/>  | 
+<img src="test_images/test3.jpg"/> | <img src="output_images/test3_thresholding.png"/>  | 
+<img src="test_images/test4.jpg"/> | <img src="output_images/test4_thresholding.png"/>  | 
+<img src="test_images/test5.jpg"/> | <img src="output_images/test5_thresholding.png"/>  | 
+<img src="test_images/test6.jpg"/> | <img src="output_images/test6_thresholding.png"/>  | 
+
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
