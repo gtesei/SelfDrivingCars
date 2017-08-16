@@ -45,7 +45,25 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
-Original Image - <img src="test_images/test2.jpg" />  Undistorted Image - <img src="output_images/test2_undistort.png" /> 
+__Original Image__ 
+<img src="test_images/test2.jpg"/>  
+
+__Undistorted Image__ 
+<img src="output_images/test2_undistort.png" /> 
+
+Other examples of undistorted images can be found here. 
+
+Original Image | Undistorted Image |
+--- | --- | 
+[test1](test_images/test1.jpg) | [test1 undistorted](output_images/test1_undistort.png) | 
+[test2](test_images/test2.jpg) | [test1 undistorted](output_images/test2_undistort.png) | 
+[test3](test_images/test3.jpg) | [test1 undistorted](output_images/test3_undistort.png) | 
+[test4](test_images/test4.jpg) | [test1 undistorted](output_images/test4_undistort.png) | 
+[test5](test_images/test5.jpg) | [test1 undistorted](output_images/test5_undistort.png) | 
+[test6](test_images/test6.jpg) | [test1 undistorted](output_images/test6_undistort.png) | 
+
+
+
 
 ### Pipeline (single images)
 
