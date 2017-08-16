@@ -26,7 +26,7 @@ To help the reviewer examine your work, please save examples of the output from 
 Contents 
 ---
 
-* writeup
-* code (or a Jupyter notebook)
-* example output images
-* output video
+* [writeup](https://github.com/gtesei/SelfDrivingCars/blob/master/P4-CarND-Advanced-Lane-Lines/writeup.md) 
+* [code (or a Jupyter notebook)](https://github.com/gtesei/SelfDrivingCars/blob/master/P4-CarND-Advanced-Lane-Lines/writeup.md) 
+* [example output images](https://github.com/gtesei/SelfDrivingCars/tree/master/P4-CarND-Advanced-Lane-Lines/output_images) 
+* [output video](TBD)
