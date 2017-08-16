@@ -51,7 +51,7 @@ __Original Image__
 __Undistorted Image__ 
 <img src="output_images/test2_undistort.png" /> 
 
-Other examples of undistorted images can be found here. 
+Other examples can be found here. 
 
 Original Image | Undistorted Image |
 --- | --- | 
@@ -62,15 +62,31 @@ Original Image | Undistorted Image |
 [test5](test_images/test5.jpg) | [test1 undistorted](output_images/test5_undistort.png) | 
 [test6](test_images/test6.jpg) | [test1 undistorted](output_images/test6_undistort.png) | 
 
-
+Related code can be found in cell #5-#6 of Advanced_Lane_Finding_Notebook.ipynb. 
 
 
 ### Pipeline (single images)
 
 #### 1. Provide an example of a distortion-corrected image.
 
-To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![alt text][image2]
+__Original Image__ 
+<img src="test_images/test2.jpg"/>  
+
+__Undistorted Image__ 
+<img src="output_images/test2_undistort.png" /> 
+
+Other examples can be found here. 
+
+Original Image | Undistorted Image |
+--- | --- | 
+[test1](test_images/test1.jpg) | [test1 undistorted](output_images/test1_undistort.png) | 
+[test2](test_images/test2.jpg) | [test1 undistorted](output_images/test2_undistort.png) | 
+[test3](test_images/test3.jpg) | [test1 undistorted](output_images/test3_undistort.png) | 
+[test4](test_images/test4.jpg) | [test1 undistorted](output_images/test4_undistort.png) | 
+[test5](test_images/test5.jpg) | [test1 undistorted](output_images/test5_undistort.png) | 
+[test6](test_images/test6.jpg) | [test1 undistorted](output_images/test6_undistort.png) | 
+
+Related code can be found in cell #5-#6 of Advanced_Lane_Finding_Notebook.ipynb. 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
