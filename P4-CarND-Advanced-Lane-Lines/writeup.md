@@ -112,7 +112,7 @@ Original Image | Thresholded Binary Image |
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
-The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
+The code for my perspective transform includes a function called `warper()`, which appears in cell #15 of Advanced_Lane_Finding_Notebook.ipynb.  The `warper()` function takes as inputs an image (`imgage`). I chose the hardcode the source and destination points in the following manner:
 
 ```python
 src = np.float32(
@@ -127,7 +127,7 @@ dst = np.float32(
     [(img_size[0] * 3 / 4), 0]])
 ```
 
-This resulted in the following source and destination points:
+This resulted in the following source and destination points for the image _test_images/straight_lines1.jpg_:
 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
@@ -138,7 +138,11 @@ This resulted in the following source and destination points:
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
-![alt text][image4]
+| Undistorted image with source points drawn        | Warped result with dest.points drawn   | 
+|:-------------:|:-------------:| 
+| <img src="output_images/straight_lines1_undist.png"/>      | <img src="output_images/straight_lines1_warped.png"/>       | 
+| <img src="output_images/straight_lines2_undist.png"/>      | <img src="output_images/straight_lines2_warped.png"/>       | 
+
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
