@@ -29,4 +29,4 @@ Contents
 * [writeup](https://github.com/gtesei/SelfDrivingCars/blob/master/P4-CarND-Advanced-Lane-Lines/writeup.md) 
 * [code (or a Jupyter notebook)](https://github.com/gtesei/SelfDrivingCars/blob/master/P4-CarND-Advanced-Lane-Lines/writeup.md) 
 * [example output images](https://github.com/gtesei/SelfDrivingCars/tree/master/P4-CarND-Advanced-Lane-Lines/output_images) 
-* [output video](TBD)
+* [output video](https://youtu.be/pf64NCrA7eY)
