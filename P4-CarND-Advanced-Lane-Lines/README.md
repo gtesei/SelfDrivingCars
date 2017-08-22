@@ -30,3 +30,13 @@ Contents
 * [code (or a Jupyter notebook)](https://github.com/gtesei/SelfDrivingCars/blob/master/P4-CarND-Advanced-Lane-Lines/Advanced_Lane_Finding_Notebook.ipynb) 
 * [example output images](https://github.com/gtesei/SelfDrivingCars/tree/master/P4-CarND-Advanced-Lane-Lines/output_images) 
 * [output video](https://youtu.be/Y94e3LvBfyM)
+
+
+Further Readings  
+---
+
+* [Real-time illumination invariant lane detection for lane departure
+warning system](http://diml.yonsei.ac.kr/papers/Real-time%20Illumination%20Invariant%20Lane%20Detection%20%20for%20Lane%20Departure%20Warning%20System.pdf)
+* [Robust lane finding using advanced computer vision techniques: Mid project update](https://medium.com/towards-data-science/robust-lane-finding-using-advanced-computer-vision-techniques-mid-project-update-540387e95ed3)
+* [ROBUST AND REAL TIME DETECTION OF CURVY LANES (CURVES) HAVING DESIRED SLOPES FOR DRIVING ASSISTANCE AND AUTONOMOUS VEHICLES](http://airccj.org/CSCP/vol5/csit53211.pdf) 
+* [Real time Detection of Lane Markers in Urban Streets](http://www.vision.caltech.edu/malaa/publications/aly08realtime.pdf)
