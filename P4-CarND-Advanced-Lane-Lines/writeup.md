@@ -1,4 +1,4 @@
-## Writeup 
+## Writeup - Submission N. 2 
 
 ---
 
@@ -14,6 +14,30 @@ The goals / steps of this project are the following:
 * Determine the curvature of the lane and vehicle position with respect to center.
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
+
+## Required N.1 
+
+Position of the car with respect to center is not correct. As the width of the lane is about 3.7 meter and center of the lane would be 3.7/2=1.85 approximately. With high values>abs(1.0) , car should be driving outside the lanes but it is not the case in the video. After, detecting the lanes correctly, please make sure that value of car position witmeterh respect to center is in range (-0.7,0.7)
+
+### How it was handled 
+Please, see cells #30 of Advanced_Lane_Finding_Notebook.ipynb (lines 170-171) where specific log has been added and it was never invoked 
+
+
+## Required N.2 
+Lanes are drawn on the distorted image instead of undistorted one. It is obvious by looking at the car front hood. Please, make sure to undistort the image in the beginning of the pipeline, use that image for further processing and at the end lanes should also be drawn on the undistorted image not the original image.
+
+### How it was handled 
+Please, see cells #30 of Advanced_Lane_Finding_Notebook.ipynb 
+
+## Required N.3 
+Good job in detecting and drawing the lanes. Overall the results are very good.
+Lanes are drawn on the distorted frame instead of undistorted one. It is obvious by looking at the car front hood. Please, make sure to undistort the frame in the beginning of the pipeline, use that frame for further processing and at the end lanes should also be drawn on the undistorted frame not the original frame.
+In few frames,for example under the shadow area right lane is not well detected.
+Scenarios where the algorithm fails are shared below. You can click on individual image to see and zoom the results. As it is a second project about lanes detection in this term, for this video very good results are expected.
+
+### How it was handled 
+Please, see the new [video](https://youtu.be/Y94e3LvBfyM)  
+
 
 ## Rubric Points
 
@@ -142,7 +166,7 @@ I verified that my perspective transform was working as expected by drawing the 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Then I fit my the perspective transformed and thresholded image with a 2nd order polynomial using a sliding histogram approach. I start at the maximum peaks in the bottom half of the image and move our way up. I then subsequently search for the line with the same approach and finally fit a polynomial (see #21-#26 of Advanced_Lane_Finding_Notebook.ipynb)
+Then I fit my the perspective transformed and thresholded image with a 2nd order polynomial using a sliding histogram approach. I start at the maximum peaks in the bottom half of the image and move our way up. I then subsequently search for the line with the same approach and finally fit a polynomial (see #21-#25 of Advanced_Lane_Finding_Notebook.ipynb)
 
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
@@ -153,7 +177,7 @@ This approach calculates curvature for given polynomial fits.
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-Please refer to cells #28-#30 of Advanced_Lane_Finding_Notebook.ipynb.  Here is an example of my result on a test image:
+Please refer to cells #28-#31 of Advanced_Lane_Finding_Notebook.ipynb.  Here is an example of my result on a test image:
 
 
 |         |    | 
@@ -170,7 +194,7 @@ Please refer to cells #28-#30 of Advanced_Lane_Finding_Notebook.ipynb.  Here is 
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](https://youtu.be/pf64NCrA7eY)
+Here's a [link to my video result](https://youtu.be/Y94e3LvBfyM)
 
 ---
 
