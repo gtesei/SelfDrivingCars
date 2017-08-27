@@ -28,6 +28,6 @@ Contents
 ---
 
 * [writeup](https://github.com/gtesei/SelfDrivingCars/blob/master/P5-CarND-Vehicle-Detection/writeup.md) 
-* [code (or a Jupyter notebook)](https://github.com/gtesei/SelfDrivingCars/blob/master/P4-CarND-Advanced-Lane-Lines/Advanced_Lane_Finding_Notebook.ipynb) 
-* [example output images](https://github.com/gtesei/SelfDrivingCars/tree/master/P4-CarND-Advanced-Lane-Lines/output_images) 
-* [output video](https://youtu.be/Y94e3LvBfyM)
+* [code (or a Jupyter notebook)]( ... ) 
+* [example output images](https://github.com/gtesei/SelfDrivingCars/tree/master/P5-CarND-Vehicle-Detection/output_images) 
+* [output video](https://youtu.be/sm5b6fb9DZY)
