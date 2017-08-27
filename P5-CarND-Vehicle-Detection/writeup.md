@@ -53,15 +53,10 @@ The most fast model in computing score on new images is LinearSVC and the differ
 
 ## 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
-I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
-
-![alt text][image3]
+A grid of sliding windows is created in such a way that only the regions that could potentially have vehicles are retained. For example, the sky is removed, the bottom that has the bonnet is removed. This increases the speed of detection and reduces false positives. Also, different scales are used to create sliding windows, with the ones near the horizon being smaller, the ones closer to the camera car are larger. A total of four different scales have been used.
 
 
-
-
-A grid of sliding windows is created in such a way that only the regions that could potentially have vehicles are retained. For example, the sky etc is completely removed, the bottom that has the bonnet is removed. This increases the speed of detection and reduces false positives. For scales, different scales were used to create sliding windows, with the ones near the horizon being smaller, the ones closer to the camera car are larger. A total of four different scales have been used.
-
+<img src="output_images/test_sliding_windows_grid.jpg" />
 
 
 ## 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
@@ -69,12 +64,15 @@ A grid of sliding windows is created in such a way that only the regions that co
 Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
 
 ![alt text][image4]
+
+
 ---
 
 # Video Implementation
 
 ## 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
-Here's a [link to my video result](./project_video.mp4)
+
+Here's a [link to my video result](https://youtu.be/sm5b6fb9DZY)
 
 
 ## 2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
