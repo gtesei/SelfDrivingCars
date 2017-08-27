@@ -28,6 +28,8 @@ Contents
 ---
 
 * [writeup](https://github.com/gtesei/SelfDrivingCars/blob/master/P5-CarND-Vehicle-Detection/writeup.md) 
-* [code (or a Jupyter notebook)]( ... ) 
+* code (or a Jupyter notebook)
+    * [Classifier_EDA.ipynb](https://github.com/gtesei/SelfDrivingCars/blob/master/P5-CarND-Vehicle-Detection/Classifier_EDA.ipynb)
+    * [Search_Classify.ipynb](https://github.com/gtesei/SelfDrivingCars/blob/master/P5-CarND-Vehicle-Detection/Search_Classify.ipynb)
 * [example output images](https://github.com/gtesei/SelfDrivingCars/tree/master/P5-CarND-Vehicle-Detection/output_images) 
 * [output video](https://youtu.be/sm5b6fb9DZY)
