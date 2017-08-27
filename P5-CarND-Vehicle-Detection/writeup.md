@@ -34,7 +34,8 @@ I discarded RGB color space for its undesirable properties under changing light 
 
 ### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-I trained several models 
+I trained and validated several models by using 4-fold cross validation as resample procedure. 
+This choice seems safe considering the fact we have >17K observations.   
 
 Predictive_Model |	Parameters |	Accuracy_Mean	| Accuracy_STD |	Predict_Time
 --- | --- | --- | --- | --- |
@@ -53,6 +54,13 @@ The most fast model in computing score on new images is LinearSVC and the differ
 I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
 
 ![alt text][image3]
+
+
+
+
+A grid of sliding windows is created in such a way that only the regions that could potentially have vehicles are retained. For example, the sky etc is completely removed, the bottom that has the bonnet is removed. This increases the speed of detection and reduces false positives. For scales, different scales were used to create sliding windows, with the ones near the horizon being smaller, the ones closer to the camera car are larger. A total of four different scales have been used.
+
+
 
 ## 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
