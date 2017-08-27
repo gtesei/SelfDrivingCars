@@ -21,3 +21,13 @@ Some example images for testing your pipeline on single frames are located in th
 **As an optional challenge** Once you have a working pipeline for vehicle detection, add in your lane-finding algorithm from the last project to do simultaneous lane-finding and vehicle detection!
 
 **If you're feeling ambitious** (also totally optional though), don't stop there!  We encourage you to go out and take video of your own, and show us how you would implement this project on a new video!
+
+
+
+Contents 
+---
+
+* [writeup](https://github.com/gtesei/SelfDrivingCars/blob/master/P5-CarND-Vehicle-Detection/writeup.md) 
+* [code (or a Jupyter notebook)](https://github.com/gtesei/SelfDrivingCars/blob/master/P4-CarND-Advanced-Lane-Lines/Advanced_Lane_Finding_Notebook.ipynb) 
+* [example output images](https://github.com/gtesei/SelfDrivingCars/tree/master/P4-CarND-Advanced-Lane-Lines/output_images) 
+* [output video](https://youtu.be/Y94e3LvBfyM)
