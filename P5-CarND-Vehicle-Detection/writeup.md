@@ -47,6 +47,8 @@ SVC		| {'kernel': 'rbf', 'C': 5}		| 0.997691		| 0.000537		| 67.464008
 
 The most fast model in computing score on new images is LinearSVC and the difference in terms of acccuracy is negligible.
 
+**Note**: SVC with radial kernel has better accuracy than SVC with linear kernel but we have ~67 secs to score on test set on average instead of < 1 sec. 
+
 # Sliding Window Search
 
 ## 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
