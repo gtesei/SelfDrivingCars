@@ -20,8 +20,6 @@ TODO
 
 ### 1. Explain how (and identify where in your code) you extracted HOG features from the training images.
 
-Here is an example using the `YCrCb` color space and HOG parameters of `orientations=8`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
-
 The code for this step is contained in the first code cell of the IPython notebook (Classifier_EDA.ipynb line #2).
 
 I started by reading in all the vehicle and non-vehicle images. Here is an example of one of each of the vehicle and non-vehicle classes. I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).
