@@ -30,11 +30,21 @@ vehicle | Non-vehicle |
 
 ### 2. Explain how you settled on your final choice of HOG parameters.
 
-I tried various combinations of parameters and...
+I discarded RGB color space for its undesirable properties under changing light conditions. I ended up using YUV color space and HOG parameters of orientations=11, pixels_per_cell=(16, 16) and cells_per_block=2.
 
 ### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-I trained a linear SVM using...
+I trained several models 
+
+Predictive_Model |	Parameters |	Accuracy_Mean	| Accuracy_STD |	Predict_Time
+--- | --- | --- | --- | --- |
+LinearSVC	| {'loss': 'hinge'}	| 0.992286	| 0.000683	| 0.293750
+LogisticRegression	| {'C': 0.1} |	0.993919 |	0.000552 |	0.316752
+RandomForest	| {'criterion': 'gini', 'max_depth': None, 'n_estimators': 1000}	| 0.994707	| 0.001784	| 4.457001
+KNeighborsClassifier 	| 	{'weights': 'distance', 'n_neighbors': 5}		| 0.995721		|  0.000828		|  698.066331
+SVC		| {'kernel': 'rbf', 'C': 5}		| 0.997691		| 0.000537		| 67.464008
+
+The most fast model in computing score on new images is LinearSVC and the difference in terms of acccuracy is negligible.
 
 # Sliding Window Search
 
