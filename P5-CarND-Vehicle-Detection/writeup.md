@@ -44,6 +44,12 @@ I discarded RGB color space for its undesirable properties under changing light 
 
 The code is in the IPython notebook Classifier_EDA.ipynb. 
 
+#### Post-Evaluation
+
+Good job using YUV color channel! A suggestion would be to try YCrCb using just HOG, research suggests it is more powerful!
+
+[Check it out](https://pure.tue.nl/ws/files/3283178/Metis245392.pdf)
+
 ### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
 I trained and validated several models by using 4-fold cross validation as resample procedure. 
