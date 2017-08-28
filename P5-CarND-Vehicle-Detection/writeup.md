@@ -61,7 +61,7 @@ A grid of sliding windows is created in such a way that only the regions that co
 
 ## 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
-Thresholding the heatmap helps to reduce false positives. I used a threshold of 4. Detections that are not covered by a minimum number of sliding windows are discarded. The heatmap also helps combine duplicate detections into a single detection. Also, heatmaps in previous frames are considered according to the following equation `previousHeatmap*0.2 + currentHeatmap*(1 - 0.2)`. 
+Thresholding the heatmap helps to reduce false positives. I used a threshold of 4. Detections that are not covered by a minimum number of sliding windows are discarded. The heatmap also helps combine duplicate detections into a single detection. Also, heatmaps in previous frames are considered according to the following equation `currentHeatmap = previousHeatmap*0.2 + currentHeatmap*(1 - 0.2)`. 
 
 
 ---
