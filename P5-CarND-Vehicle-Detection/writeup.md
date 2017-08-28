@@ -12,7 +12,16 @@ The goals / steps of this project are the following:
 
 # [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 
-TODO  
+
+CRITERIA | MEETS SPECIFICATIONS | HOW I ADDRESSED THE POINT | 
+Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. Here is a template writeup for this project you can use as a guide and a starting point. | The writeup / README should include a statement and supporting figures / images that explain how each rubric item was addressed, and specifically where in the code each step was handled. | Please refer to this document |
+Explain how (and identify where in your code) you extracted HOG features from the training images. Explain how you settled on your final choice of HOG parameters. | Explanation given for methods used to extract HOG features, including which color space was chosen, which HOG parameters (orientations, pixels_per_cell, cells_per_block), and why. | Please refer to section _1. Explain how (and identify where in your code) you extracted HOG features from the training images_ |
+Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them). | The HOG features extracted from the training data have been used to train a classifier, could be SVM, Decision Tree or other. Features should be scaled to zero mean and unit variance before training the classifier. | Please refer to section _3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them)._ |
+Describe how (and identify where in your code) you implemented a sliding window search. How did you decide what scales to search and how much to overlap windows? | A sliding window approach has been implemented, where overlapping tiles in each test image are classified as vehicle or non-vehicle. Some justification has been given for the particular implementation chosen. | Please refer to section _1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?_ |
+Show some examples of test images to demonstrate how your pipeline is working. How did you optimize the performance of your classifier? | Some discussion is given around how you improved the reliability of the classifier i.e., fewer false positives and more reliable car detections (this could be things like choice of feature vector, thresholding the decision function, hard negative mining etc.) | please refer to _2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?_ |
+Provide a link to your final video output. Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.) | The sliding-window search plus classifier has been used to search for and identify vehicles in the videos provided. Video output has been generated with detected vehicle positions drawn (bounding boxes, circles, cubes, etc.) on each frame of video. | Please refer to section _1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)_ |
+Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes. | A method, such as requiring that a detection be found at or near the same position in several subsequent frames, (could be a heat map showing the location of repeat detections) is implemented as a means of rejecting false positives, and this demonstrably reduces the number of false positives. Same or similar method used to draw bounding boxes (or circles, cubes, etc.) around high-confidence detections where multiple overlapping detections occur. | Please refer to section _2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes._ |
+Briefly discuss any problems / issues you faced in your implementation of this project. Where will your pipeline likely fail? What could you do to make it more robust? | Discussion includes some consideration of problems/issues faced, what could be improved about their algorithm/pipeline, and what hypothetical cases would cause their pipeline to fail. | Please refer to section _1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?_ |
 
 ---
 
@@ -32,6 +41,8 @@ vehicle | Non-vehicle |
 
 I discarded RGB color space for its undesirable properties under changing light conditions. I ended up using YUV color space and HOG parameters of orientations=11, pixels_per_cell=(16, 16) and cells_per_block=2.
 
+The code is in the IPython notebook Classifier_EDA.ipynb. 
+
 ### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
 I trained and validated several models by using 4-fold cross validation as resample procedure. 
@@ -49,14 +60,19 @@ The most fast model in computing score on new images is LinearSVC and the differ
 
 **Note**: SVC with radial kernel has better accuracy than SVC with linear kernel but we have ~67 secs to score on test set on average instead of < 1 sec. 
 
+The code is in the IPython notebook Classifier_EDA.ipynb. 
+
 # Sliding Window Search
 
 ## 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
+
 
 A grid of sliding windows is created in such a way that only the regions that could potentially have vehicles are retained. For example, the sky is removed, the bottom that has the bonnet is removed. This increases the speed of detection and reduces false positives. Also, different scales are used to create sliding windows, with the ones near the horizon being smaller, the ones closer to the camera car are larger. A total of four different scales have been used.
 
 
 <img src="output_images/test_sliding_windows_grid.jpg" />
+
+The code is in the IPython notebook Search_Classify.ipynb (cell # 23). 
 
 
 ## 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
@@ -70,7 +86,7 @@ Initial Image |	All Detections |	Heatmap Before Threshold	| Heatmap After Thresh
 <img src="test_images/test2.jpg" /> |	<img src="output_images/test_2_all_detections.png" /> 	| <img src="output_images/test_2_heatmap_before_threshold.png" /> |	<img src="output_images/test_2_heatmap_after_threshold.png" /> | <img src="output_images/test_2_labeled_regions.png" /> | <img src="output_images/test_2_final_result.png" /> | 
 <img src="test_images/test3.jpg" /> |	<img src="output_images/test_3_all_detections.png" /> 	| <img src="output_images/test_3_heatmap_before_threshold.png" /> |	<img src="output_images/test_3_heatmap_after_threshold.png" /> | <img src="output_images/test_3_labeled_regions.png" /> | <img src="output_images/test_3_final_result.png" /> | 
 
-
+The code is in the IPython notebook Search_Classify.ipynb. 
 
 ---
 
@@ -86,6 +102,8 @@ Here's a [link to my video result](https://youtu.be/sm5b6fb9DZY)
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
 
 Thresholding the heatmap helps to reduce false positives. I used a threshold of 4. Detections that are not covered by a minimum number of sliding windows are discarded. The heatmap also helps combine duplicate detections into a single detection. Also, heatmaps in previous frames are considered according to the following equation `currentHeatmap = previousHeatmap*0.2 + currentHeatmap*(1 - 0.2)`. 
+
+The code is in the IPython notebook Search_Classify.ipynb (cell # 23). 
 
 
 
