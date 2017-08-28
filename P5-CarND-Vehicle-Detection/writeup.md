@@ -64,6 +64,14 @@ A grid of sliding windows is created in such a way that only the regions that co
 Thresholding the heatmap helps to reduce false positives. I used a threshold of 4. Detections that are not covered by a minimum number of sliding windows are discarded. The heatmap also helps combine duplicate detections into a single detection. Also, heatmaps in previous frames are considered according to the following equation `currentHeatmap = previousHeatmap*0.2 + currentHeatmap*(1 - 0.2)`. 
 
 
+Initial Image |	All Detections |	Heatmap Before Threshold	| Heatmap After Threshold |	Labeled Regions | Final Result | 
+--- | --- | --- | --- | --- | --- |
+<img src="test_images/test1.jpg" /> |	<img src="output_images/test_1_all_detections.png" /> 	| <img src="output_images/test_1_heatmap_before_threshold.png" /> |	<img src="output_images/test_1_heatmap_after_threshold.png" /> | <img src="output_images/test_1_labeled_regions.png" /> | <img src="output_images/test_1_final_result.png" /> | 
+<img src="test_images/test2.jpg" /> |	<img src="output_images/test_2_all_detections.png" /> 	| <img src="output_images/test_2_heatmap_before_threshold.png" /> |	<img src="output_images/test_2_heatmap_after_threshold.png" /> | <img src="output_images/test_2_labeled_regions.png" /> | <img src="output_images/test_2_final_result.png" /> | 
+<img src="test_images/test3.jpg" /> |	<img src="output_images/test_3_all_detections.png" /> 	| <img src="output_images/test_3_heatmap_before_threshold.png" /> |	<img src="output_images/test_3_heatmap_after_threshold.png" /> | <img src="output_images/test_3_labeled_regions.png" /> | <img src="output_images/test_3_final_result.png" /> | 
+
+
+
 ---
 
 # Video Implementation
