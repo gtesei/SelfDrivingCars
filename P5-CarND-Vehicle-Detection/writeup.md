@@ -107,5 +107,17 @@ Initial Image |	All Detections |	Heatmap Before Threshold	| Heatmap After Thresh
 
 ## 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+The predictive model chosen for classifying cars is a SVM with linear kernel but I showed this is not the most accurate model. For example, SVM with radial kernel proved to be more accurate on this dataset but time to score is > 67 secs on my machine. Anyway, the related accuracy of linear SVM is >99% and nonetheless this does not prevent false positives, so that I had to use a heatmap threshold of 4 which is pretty high. This makes me think the whole pipeline is pretty prone to false positives. I wonder if in other videos the heatmap threshold of 4 would be enough. If not, I experimented that thresholds > 5 come with high false negative rate, which would be a major limit for this approach. Also, I wonder how this pipeline would perform in cases where HOG can be chellenged, e.g. roads made of non uniform colors or bad weather conditions.  
+
+There are other approaches based on ConvNets for a comparison. For example, [YOLO](https://arxiv.org/abs/1506.02640) which stands for "You only look once" frames object detection as a regression problem to spatially separated bounding boxes and associated class probabilities. A single neural network predicts bounding boxes and class probabilities directly from full images in one evaluation. Since the whole detection pipeline is a single network, it can be optimized end-to-end directly on detection performance. Base YOLO model processes images in real-time at 45 frames per second and compared to state-of-the-art detection systems, YOLO makes more localization errors but is far less likely to predict false detections where nothing exists. [Here](https://github.com/ksakmann/CarND-Vehicle-Detection/blob/master/output_images/yolo-result.avi) there is the same video of this project processed by YOLO. False positives are practically absent and performances are comparable with our pipeline even without using heatmap threshold although in a couple of frame a car was classified as truck (which is a misclassification error).   
+
+
+
+
+
+
+
+
+
+
 
