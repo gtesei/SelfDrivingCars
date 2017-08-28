@@ -85,19 +85,21 @@ Here's a [link to my video result](https://youtu.be/sm5b6fb9DZY)
 
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
 
-Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
-
-## Here are six frames and their corresponding heatmaps:
-
-![alt text][image5]
-
-### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
-![alt text][image6]
-
-### Here the resulting bounding boxes are drawn onto the last frame in the series:
-![alt text][image7]
+Thresholding the heatmap helps to reduce false positives. I used a threshold of 4. Detections that are not covered by a minimum number of sliding windows are discarded. The heatmap also helps combine duplicate detections into a single detection. Also, heatmaps in previous frames are considered according to the following equation `currentHeatmap = previousHeatmap*0.2 + currentHeatmap*(1 - 0.2)`. 
 
 
+
+### Here are six frames and their corresponding heatmaps:
+
+
+Initial Image |	All Detections |	Heatmap Before Threshold	| Heatmap After Threshold |	Labeled Regions | Final Result | 
+--- | --- | --- | --- | --- | --- |
+<img src="test_images/test1.jpg" /> |	<img src="output_images/test_1_all_detections.png" /> 	| <img src="output_images/test_1_heatmap_before_threshold.png" /> |	<img src="output_images/test_1_heatmap_after_threshold.png" /> | <img src="output_images/test_1_labeled_regions.png" /> | <img src="output_images/test_1_final_result.png" /> | 
+<img src="test_images/test2.jpg" /> |	<img src="output_images/test_2_all_detections.png" /> 	| <img src="output_images/test_2_heatmap_before_threshold.png" /> |	<img src="output_images/test_2_heatmap_after_threshold.png" /> | <img src="output_images/test_2_labeled_regions.png" /> | <img src="output_images/test_2_final_result.png" /> | 
+<img src="test_images/test3.jpg" /> |	<img src="output_images/test_3_all_detections.png" /> 	| <img src="output_images/test_3_heatmap_before_threshold.png" /> |	<img src="output_images/test_3_heatmap_after_threshold.png" /> | <img src="output_images/test_3_labeled_regions.png" /> | <img src="output_images/test_3_final_result.png" /> | 
+<img src="test_images/test4.jpg" /> |	<img src="output_images/test_4_all_detections.png" /> 	| <img src="output_images/test_4_heatmap_before_threshold.png" /> |	<img src="output_images/test_4_heatmap_after_threshold.png" /> | <img src="output_images/test_4_labeled_regions.png" /> | <img src="output_images/test_4_final_result.png" /> | 
+<img src="test_images/test5.jpg" /> |	<img src="output_images/test_5_all_detections.png" /> 	| <img src="output_images/test_5_heatmap_before_threshold.png" /> |	<img src="output_images/test_5_heatmap_after_threshold.png" /> | <img src="output_images/test_5_labeled_regions.png" /> | <img src="output_images/test_5_final_result.png" /> | 
+<img src="test_images/test6.jpg" /> |	<img src="output_images/test_6_all_detections.png" /> 	| <img src="output_images/test_6_heatmap_before_threshold.png" /> |	<img src="output_images/test_6_heatmap_after_threshold.png" /> | <img src="output_images/test_6_labeled_regions.png" /> | <img src="output_images/test_6_final_result.png" /> | 
 
 ---
 
