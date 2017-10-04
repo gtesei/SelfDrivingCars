@@ -14,7 +14,7 @@
 5. [(P5) Vehicle Detection](https://github.com/gtesei/SelfDrivingCars/tree/master/P5-CarND-Vehicle-Detection)
 
 ### Second Term 
-6. [(P1)  Extended Kalman Filter Project](https://github.com/gtesei/SelfDrivingCars/tree/master/P6-CarND-Extended-Kalman-Filter-Project)
+6. [(P6)  Extended Kalman Filter Project](https://github.com/gtesei/SelfDrivingCars/tree/master/P6-CarND-Extended-Kalman-Filter-Project)
 
 
 
