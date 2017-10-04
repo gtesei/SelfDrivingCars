@@ -30,6 +30,8 @@ This repository includes two files that can be used to set up and install [uWebS
    * On windows, you may need to run: `cmake .. -G "Unix Makefiles" && make`
 4. Run it: `./ExtendedKF `
 
+#  Project Rubric
+<img src="test_images/test1.jpg" /> 
 
 # Editor Settings, Code Style and Additional Data
 
