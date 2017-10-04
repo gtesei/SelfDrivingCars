@@ -31,7 +31,7 @@ This repository includes two files that can be used to set up and install [uWebS
 4. Run it: `./ExtendedKF `
 
 #  Project Rubric
-<img src="test_images/test1.jpg" /> 
+<img src="test_images/screen_final.png" /> 
 
 # Editor Settings, Code Style and Additional Data
 
