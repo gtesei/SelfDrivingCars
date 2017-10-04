@@ -31,7 +31,20 @@ This repository includes two files that can be used to set up and install [uWebS
 4. Run it: `./ExtendedKF `
 
 #  Project Rubric
+
 <img src="screen_final.png" /> 
+
+CRITERIA | MEETS SPECIFICATIONS | HOW I ADDRESSED THE POINT | 
+--- | --- | --- |
+Your code should compile.| Code must compile without errors with cmake and make. Given that we've made CMakeLists.txt as general as possible, it's recommended that you do not change it unless you can guarantee that your changes will still compile on any platform.| After installing all dependencies, executing `mkdir build && cd build` and `cmake .. && make`  you can see the code in `src` compile|
+px, py, vx, vy output coordinates must have an RMSE <= [.11, .11, 0.52, 0.52] when using the file: "obj_pose-laser-radar-synthetic-input.txt which is the same data file the simulator uses for Dataset 1"| Your algorithm will be run against Dataset 1 in the simulator which is the same as "data/obj_pose-laser-radar-synthetic-input.txt" in the repository. We'll collect the positions that your algorithm outputs and compare them to ground truth data. Your px, py, vx, and vy RMSE should be less than or equal to the values [.11, .11, 0.52, 0.52].| RMSE is [.0984, .0852, 0.4075, 0.4632 |
+Your Sensor Fusion algorithm follows the general processing flow as taught in the preceding lessons.| While you may be creative with your implementation, there is a well-defined set of steps that must take place in order to successfully build a Kalman Filter. As such, your project should follow the algorithm as described in the preceding lesson.| Project follows the algorithm as described in the lesson. Please, see *src/kalman_filter.cpp*|
+Your Kalman Filter algorithm handles the first measurements appropriately.| Your algorithm should use the first measurements to initialize the state vectors and covariance matrices.| Please, see *src/FusionEKF.cpp*|
+Your Kalman Filter algorithm first predicts then updates.| Upon receiving a measurement after the first, the algorithm should predict object position to the current timestep and then update the prediction using the new measurement.| Please, see *src/FusionEKF.cpp*|
+Your Kalman Filter can handle radar and lidar measurements.| Your algorithm sets up the appropriate matrices given the type of measurement and calls the correct measurement function for a given sensor type. | Please, see *src/FusionEKF.cpp* and *src/kalman_filter.cpp*|
+Your algorithm should avoid unnecessary calculations.| This is mostly a "code smell" test. Your algorithm does not need to sacrifice comprehension, stability, robustness or security for speed, however it should maintain good practice with respect to calculations. Here are some things to avoid. This is not a complete list, but rather a few examples of inefficiencies. Running the exact same calculation repeatedly when you can run it once, store the value and then reuse the value later. Loops that run too many times. Creating unnecessarily complex data structures when simpler structures work equivalently. Unnecessary control flow checks. | Please, see *src/FusionEKF.cpp*, *src/kalman_filter.cpp* and *src/tools.cpp*|
+
+
 
 # Editor Settings, Code Style and Additional Data
 
