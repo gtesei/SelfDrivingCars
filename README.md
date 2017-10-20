@@ -15,6 +15,7 @@
 
 ### Second Term 
 6. [(P6)  Extended Kalman Filter Project](https://github.com/gtesei/SelfDrivingCars/tree/master/P6-CarND-Extended-Kalman-Filter-Project)
+7. [(P7)  Unscented Kalman Filter Project](https://github.com/gtesei/SelfDrivingCars/tree/master/P7-CarND-Unscented-Kalman-Filter-Project)
 
 
 

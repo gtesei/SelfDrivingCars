@@ -1,4 +1,4 @@
-# Unscented Kalman Filter Project Starter Code
+# Unscented Kalman Filter Project
 Self-Driving Car Engineer Nanodegree Program
 
 In this project I will utilize a **unscented kalman filter** to estimate the state of a moving object of interest with noisy lidar and radar measurements. 
