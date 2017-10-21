@@ -45,7 +45,6 @@ Your Kalman Filter can handle radar and lidar measurements.| Your algorithm sets
 Your algorithm should avoid unnecessary calculations.| This is mostly a "code smell" test. Your algorithm does not need to sacrifice comprehension, stability, robustness or security for speed, however it should maintain good practice with respect to calculations. Here are some things to avoid. This is not a complete list, but rather a few examples of inefficiencies. Running the exact same calculation repeatedly when you can run it once, store the value and then reuse the value later. Loops that run too many times. Creating unnecessarily complex data structures when simpler structures work equivalently. Unnecessary control flow checks. | Please, see *src/FusionEKF.cpp*, *src/kalman_filter.cpp* and *src/tools.cpp*|
 
 
-
 # Editor Settings, Code Style and Additional Data
 
 ## Editor Settings
@@ -66,7 +65,3 @@ Please (do your best to) stick to [Google's C++ style guide](https://google.gith
 To generate your own radar and lidar data, see the
 [utilities repo](https://github.com/udacity/CarND-Mercedes-SF-Utilities) for
 Matlab scripts that can generate additional data.
-
-
-
-
